@@ -1,0 +1,752 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#procurarInputPes{
+  scroll-margin-top: 310px;
+}
+
+#eventbus{
+  scroll-margin-top: 310px;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-family: "Manrope", sans-serif;
+}
+
+nav {
+  text-align: center;
+  background-color: #00003D;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+}
+
+.iniLog {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.iniLog h3 {
+  color: #FFFFFF;
+}
+
+.lista1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  font-size: 18px;
+  gap: 30px;
+}
+
+#logoDeput {
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px 0;
+  transition: transform .2s;
+}
+
+nav ul li:hover {
+  transform: scale(1.1);
+}
+
+.hoverIni:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.hoverIni:visited {
+  color: #FFFFFF;
+}
+
+.hoverIni:hover {
+  color: #DBB483;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px 0;
+}
+
+#iniciacao {
+  width: 100%;
+  height: 100vh;
+  background-image: url(Img/fundoNovo2.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#subIniacao {
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, .3);
+  margin-top: -60px;
+  padding: 15px;
+  padding-right: 35px;
+
+}
+
+#subIniacao button {
+  margin-top: 4px;
+  width: 260px;
+  height: 55px;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  background-color: #00008B;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform .2s;
+}
+
+#subIniacao button:hover {
+  transform: scale(1.1);
+}
+
+#subIniacao h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 3px rgba(0, 0, 139, 0.9);
+}
+
+#subIniacao h3 {
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 2px 3px rgba(0, 0, 139, 0.9);
+}
+
+#deputAreaPai {
+  display: flex;
+  gap: 7px;
+  overflow-x: scroll;
+  width: 875px;
+}
+
+.PaiDeTodosDeput {
+  height: calc(100vh - 23vh);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.PaiDeTodosDeput h1 {
+  margin-top: 40px;
+}
+
+.areaEleitoral {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  border-radius: 5px;
+  width: 1050px;
+  height: 500px;
+  text-align: center;
+  background-color: #DCDCDC;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.areaEleitoral h2 {
+  margin-top: 40px;
+}
+
+.procurarInput {
+  margin-top: 12px;
+  width: 220px;
+}
+
+.itemDeput {
+  border: 1px solid #515151;
+  border-radius: 5px;
+  height: 300px;
+  min-width: 210px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.aparecer {
+  display: none;
+}
+
+.iconeRede {
+  margin-top: 6px;
+}
+
+.iconesDeput {
+  height: 22px;
+}
+
+.imageDeput {
+  width: 100px;
+  height: 134px;
+  margin-top: 20px;
+}
+
+styledeput {
+  font-size: 16px;
+}
+
+.nomeDeputTotal {
+  width: 200px;
+  text-align: center;
+}
+
+#voltarTopo {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 20px;
+  right: 2%;
+  border: none;
+  border-radius: 50%;
+  display: block;
+  opacity: 0;
+  z-index: 1000;
+  cursor: auto;
+  background-color: #2D3132;
+}
+
+#voltarTopo img {
+  height: 100%;
+  width: 100%;
+}
+
+#voltarTopo.show {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+#voltarTopo:hover {
+  transform: scale(1.1);
+}
+
+#partAreaPai {
+  display: flex;
+  gap: 9px;
+  scroll-margin-top: 310px;
+}
+
+.itensCardPart {
+  border: 1px solid #515151;
+  border-radius: 5px;
+  height: 300px;
+  width: 210px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.itensCardPart2 {
+  border: 1px solid #515151;
+  border-radius: 5px;
+  height: 300px;
+  width: 210px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.iconPart {
+  height: 120px;
+  margin-top: 22px;
+}
+
+.tamText {
+  width: 180px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.iconepart {
+  display: flex;
+  gap: 4px;
+}
+
+.iconepart img {
+  height: 22px;
+}
+
+#pesquiInpunt {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+#pesquiInpunt button {
+  width: 120px;
+  height: 35px;
+  display: flex;
+  margin-top: 13px;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #0000FF;
+  color: #FFFFFF;
+}
+
+#pesquiInpunt button img {
+  width: 18px;
+  margin-left: 27px;
+}
+
+#pesquiInpunt input {
+  font-size: 12px;
+}
+
+#paiTodosNoti {
+  display: flex;
+  margin-bottom: 60px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+#imageNot img {
+  width: 640px;
+  border-radius: 5px;
+  transition: transform .2s;
+  margin-left: 100px;
+}
+
+#imageNot img:hover {
+  transform: scale(1.1);
+}
+
+.sobreText {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 720px;
+  padding-bottom: 15px;
+  background-color: #e5e7eb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-left: 140px;
+}
+
+.sobreText h2 {
+  font-size: 30px;
+}
+
+.sobreText p {
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 20px;
+  font-weight: 500;
+  width: 670px;
+}
+
+#boxNot {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 1700px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 30px;
+  background-color: #DCDCDC;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  scroll-margin-top: 150px;
+}
+
+.sobreText button {
+  width: 240px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  transition: transform .2s;
+  background-color: #0000FF;
+  color: #FFFFFF;
+}
+
+.sobreText button:hover {
+  transform: scale(1.1);
+}
+
+.aNot:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.aNot:visited {
+  color: #FFFFFF;
+}
+
+.aNot:hover {
+  color: #FFFFFF;
+}
+
+.areaEleitoralEvent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 120px;
+  border-radius: 5px;
+  width: 1400px;
+  height: 540px;
+  text-align: center;
+  background-color: #DCDCDC;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.areaEleitoralEvent h2 {
+  margin-top: 40px;
+}
+
+#cardEvent {
+  background-color: #e5e7eb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 1200px;
+  margin-top: 16px;
+  margin-bottom: 10px;
+
+}
+
+#cardEvent h3 {
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+#eventAreaPai {
+  overflow-y: scroll;
+}
+
+.PaiDeTodosDeputEvent {
+  height: calc(100vh - 23vh);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.PaiDeTodosDeputEvent h1 {
+  margin-top: 40px;
+}
+
+.PaiDeTodosDeputPart {
+  height: calc(100vh - 23vh);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.PaiDeTodosDeputPart h1 {
+  margin-top: 40px;
+}
+
+.areaEleitoralPart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  border-radius: 5px;
+  width: 1050px;
+  height: 500px;
+  text-align: center;
+  background-color: #DCDCDC;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.areaEleitoralPart h2 {
+  margin-top: 40px;
+}
+
+footer {
+  height: 65vh;
+  width: 100%;
+  background-color: #DCDCDC;
+  color: #000000;
+}
+
+.org {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#faixasite {
+  width: 100%;
+  height: 40px;
+  background-color: #00008B;
+}
+
+#faixasite h1 {
+  color: #FFFFFF;
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+}
+
+#textoCon {
+  width: 850px;
+  height: 400px;
+  font-size: 18px;
+  background-color: #E5E7EB;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 6px 6px 6px 6px;
+  text-align: justify;
+}
+
+
+
+#personForm h2 {
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #00008B;
+  color: #000000;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#textoCon p {
+  font-size: 18px;
+  padding: 6px 6px 6px 6px;
+  text-align: justify;
+}
+
+#emailusu {
+  width: 220px;
+  height: 30px;
+  font-size: 16px;
+}
+
+#message {
+  width: 400px;
+  height: 200px;
+  display: block;
+}
+
+#nomeusu {
+  width: 220px;
+  height: 30px;
+  font-size: 16px;
+}
+.finalLiteral {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 26px;
+  font-size: 12px;
+}
+
+#butForm{
+  margin-top: 8px;
+  width: 65px;
+}
+
+
+@media (max-width: 481px) {
+
+  .lista1 {
+    display: none;
+  }
+
+  #subIniacao {
+    background-color: rgba(0, 0, 0, 0);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  #deputAreaPai {
+    width: 100%;
+  }
+
+  .itemDeput,
+  .itensCardPart {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  .areaEleitoral,
+  .areaEleitoralEvent,
+  .areaEleitoralPart {
+    width: calc(100% - 20px);
+    margin: 10px;
+    height: auto;
+  }
+
+  .PaiDeTodosDeputPart {
+    flex-direction: column;
+    margin-top: 150px;
+  }
+
+  .itensCardPart2 {
+    display: none;
+  }
+
+  #mobOucult {
+    display: none;
+  }
+
+  .PaiDeTodosDeputEvent {
+    margin-top: 150px;
+  }
+  
+  .PaiDeTodosDeput {
+    margin-top: 150px;
+  }
+
+  #paiTodosNoti {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+  }
+
+  #boxNot {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #imageNot img {
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    border-radius: 0px;
+  }
+
+  .sobreText {
+    width: 390px;
+    margin-left: 0px;
+    font-size: 10px;
+    padding-bottom: 40px;
+  }
+
+  .sobreText p {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  #cardEvent {
+    width: 90%;
+    margin: 16px auto 10px auto;
+  }
+
+  #voltarTopo {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  #pesquiInpunt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #pesquiInpunt button,
+  #pesquiInpunt input {
+    width: 90%;
+    margin: 5px 0;
+  }
+
+  footer {
+    margin-top: 250px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .org {
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: #DCDCDC;
+  }
+
+  #textoCon {
+    width: 95%;
+    font-size: 12px;
+   margin-top: 6px;
+  }
+
+  #textoCon p{
+    font-size: 12px;
+    margin-top: 20px
+  }
+  
+  form {
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+  }
+
+  #personForm {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #personForm h2{
+    text-align: center;
+  }
+
+  #nomeusu, #emailusu, #message{
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .finalLiteral p {
+    color: #000000;
+    width: 96%;
+    align-items: center;
+  }
+}
